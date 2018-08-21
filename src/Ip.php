@@ -16,26 +16,24 @@ class Ip{
  
   
    public static function getInfo($ip){
+
     if (!isset($ip)) {
             throw new \Exception("ip not set");
     }
-    if (preg_match('/^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$/',$ip)){ 
-      $curl = new Curl\Curl();
-      $curl->get("http://ipinfo.io/".$ip."/geo");
-      if($curl->error)
-      {
-        throw new \Exception("Curl Request Failed");
-      }
-      else{
-        $response = $curl->response;
-        $jsonBody = json_decode($response);
-        $location = new IpInfo((array)$jsonBody);
-        return $location;
-      }
-    }
-    else{
-      throw new \Exception("Invalid Ip address");
+
+    $curl = new Curl\Curl();
+    $curl->get("http://ipinfo.io/".$ip."/geo");
+
+    if($curl->error)
+    {
+      throw new \Exception("Curl Request Failed");
     }
     
+    else{
+      $response = $curl->response;
+      $jsonBody = json_decode($response);
+      $location = new IpInfo((array)$jsonBody);
+      return $location;
+    }
   }
 }
