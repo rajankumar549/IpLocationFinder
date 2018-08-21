@@ -1,14 +1,14 @@
+
 Ip Location Finder
 =========================
-
-Use IpLocationFinder;
-
+How To Use
+```php
 // Your Code
 
-$ipInfo = Ip.getInfo('127.0.0.1');
+$ipInfo = IpLocationFinder\Ip::getInfo('127.0.0.1');
 
 $ipCity = $ipInfo->getCity(); //eg: "New Delhi"
-
+```
 
 Features
 --------
