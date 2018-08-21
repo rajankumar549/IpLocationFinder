@@ -1,4 +1,4 @@
-Composer Library Template
+Ip Location Finder
 =========================
 
 Use IpLocationFinder;
