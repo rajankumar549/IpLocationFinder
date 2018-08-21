@@ -1,11 +1,13 @@
 <?php
+
 namespace IpLocationFinder;
+
 class IpInfo {
 
     /**
      * @var string Type Ip
      */
-	private $_ip;
+    private $_ip;
 
     /**
      * @var string Type City

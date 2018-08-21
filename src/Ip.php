@@ -1,24 +1,24 @@
 <?php 
 namespace IpLocationFinder;
+
 use Curl;
+
 /**
-*  A sample class
+*  A Ip class
 *
 *  Use this section to define what this class is doing, the PHPDocumentator will use this
 *  to automatically generate an API documentation using this information.
 *
 *  @author Rajan Kumar
 */
+
 class Ip{
 
-   /**  @var string $m_SampleProperty define here what this variable is for, do this for every instance variable */
+  public static function getInfo($ip){
 
- 
-  
-   public static function getInfo($ip){
-
-    if (!isset($ip)) {
-            throw new \Exception("ip not set");
+    if (!isset($ip))
+    {
+      throw new \Exception("ip not set");
     }
 
     $curl = new Curl\Curl();
@@ -28,8 +28,9 @@ class Ip{
     {
       throw new \Exception("Curl Request Failed");
     }
-    
-    else{
+
+    else
+    {
       $response = $curl->response;
       $jsonBody = json_decode($response);
       $location = new IpInfo((array)$jsonBody);
