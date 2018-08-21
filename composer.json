@@ -1,5 +1,5 @@
 {
-    "name": "cloudstuff/iplocation-finder",
+    "name": "cloudstuff/iplocationfinder",
     "description": "Boilerplate package for creating other packages.",
     "keywords": ["template", "composer", "package"],
     "minimum-stability":"dev",
