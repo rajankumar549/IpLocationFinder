@@ -5,7 +5,7 @@ How To Use
 ```php
 // Your Code
 
-$ipInfo = IpLocationFinder\Ip::getInfo('127.0.0.1');
+$ipInfo = IpLocationFinder\Ip::getInfo('54.78.0.1');
 
 $ipCity = $ipInfo->getCity(); //eg: "New Delhi"
 ```
