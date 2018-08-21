@@ -1,8 +1,8 @@
 {
-    "name": "IpLocationFinder",
+    "name": "cloudstuff/iplocation-finder",
     "description": "Boilerplate package for creating other packages.",
     "keywords": ["template", "composer", "package"],
-    "license": "DBAD",
+    "license": "MIT",
     "authors": [
         {
             "name": "Rajan Kumar",
@@ -11,7 +11,7 @@
     ],
     "type": "project",
     "require": {
-		"php": ">=7.1",
+	"php": ">=7.1",
         "curl/curl": "^1.9"
     },
     "require-dev": {
