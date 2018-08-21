@@ -34,16 +34,10 @@ class IpInfo {
      */
     private $_postal;
 
-    //Ip getter
-    public function getIp(){
-        return $this->ip;
-    }
-    
     public function __construct($options) {
 
-        if (!isset($options["ip"])) {
-            throw new \Exception("ip not set");
-        }
+        if (!isset($options["ip"])) throw new \Exception("ip not set");
+        
         $this->_ip      = $options["ip"];
         $this->_city    = $options["city"];
         $this->_region = $options["region"];
@@ -52,28 +46,33 @@ class IpInfo {
         $this->_postal       = $options["postal"];
     }
 
+    //Ip getter
+    public function getIp(){
+        return $this->_ip;
+    }
+
     //City getter
     public function getCity(){
-        return $this->city;
+        return $this->_city;
     }
 
     //Region getter
     public function getRegion(){
-        return $this->region;
+        return $this->_region;
     }
 
     //Country getter
     public function getCountry(){
-        return $this->country;
+        return $this->_country;
     }
 
     //Location getter
     public function getLocation(){
-        return $this->loc;
+        return $this->_loc;
     }
 
     //Postal Code getter
     public function getPostalCode(){
-        return $this->postal;
+        return $this->_postal;
     }
 }
