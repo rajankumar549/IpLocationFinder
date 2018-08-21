@@ -37,13 +37,13 @@ class IpInfo {
     public function __construct($options) {
 
         if (!isset($options["ip"])) throw new \Exception("ip not set");
-        
+
         $this->_ip      = $options["ip"];
-        $this->_city    = $options["city"];
-        $this->_region = $options["region"];
-        $this->_country      = $options["country"];
-        $this->_loc      = $options["loc"];
-        $this->_postal       = $options["postal"];
+        $this->_city    = $options["city"] ?? '';
+        $this->_region = $options["region"] ?? '';
+        $this->_country      = $options["country"] ?? '';
+        $this->_loc      = $options["loc"] ?? 'none';
+        $this->_postal       = $options["postal"] ?? '';
     }
 
     //Ip getter
