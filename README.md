@@ -4,6 +4,7 @@ Ip Location Finder
 Use IpLocationFinder;
 
 // Your Code
+
 $ipInfo = Ip.getInfo('127.0.0.1');
 
 $ipCity = $ipInfo->getCity(); //eg: "New Delhi"
